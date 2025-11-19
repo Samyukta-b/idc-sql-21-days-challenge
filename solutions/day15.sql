@@ -1,4 +1,7 @@
-/* Day 14 Challenge Question: Create a comprehensive service analysis report for week 20 showing: service name, total patients admitted that week, total patients refused, average patient satisfaction, count of staff assigned to service, and count of staff present that week. Order by patients admitted descending. */
+/* Day 14 Challenge Question: Create a comprehensive service analysis report 
+for week 20 showing: service name, total patients admitted that week, total 
+patients refused, average patient satisfaction, count of staff assigned to 
+service, and count of staff present that week. Order by patients admitted descending. */
 
 
 select sw.week, sw.service, 
@@ -13,3 +16,5 @@ left join staff_schedule ss on (ss.staff_id=s.staff_id AND sw.week=ss.week)
 where sw.week = 20
 group by sw.service, sw.week, sw.patients_admitted, sw.patients_refused
 order by patients_admitted desc
+
+-- Result table in ./`result tables`/day15.png
