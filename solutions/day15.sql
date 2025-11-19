@@ -4,7 +4,7 @@ patients refused, average patient satisfaction, count of staff assigned to
 service, and count of staff present that week. Order by patients admitted descending. */
 
 
-select sw.week, sw.service, 
+select sw.service, 
     sw.patients_admitted as patients_admitted, 
     sw.patients_refused as patients_refused, 
     round(avg(sw.patient_satisfaction),2) as avg_satisfaction,  
@@ -14,7 +14,7 @@ from services_weekly sw
 join staff s on s.service=sw.service
 left join staff_schedule ss on (ss.staff_id=s.staff_id AND sw.week=ss.week)
 where sw.week = 20
-group by sw.service, sw.week, sw.patients_admitted, sw.patients_refused
+group by sw.service, sw.patients_admitted, sw.patients_refused
 order by patients_admitted desc
 
 -- Result table in ./`result tables`/day15.png
