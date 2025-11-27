@@ -1,0 +1,5 @@
+service,total_admitted,total_refused,avg_satisfaction,total_staff,avg_present,avg_age,total_patients,performance
+ICU,648,141,81.62,1768,26.50,44.22,241,81.87
+surgery,1686,555,79.27,1300,26.50,45.59,254,77.25
+general_medicine,2332,1938,81.23,1456,26.50,46.19,242,67.92
+emergency,1185,5008,77.88,2028,26.50,45.33,263,48.51
